@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jam-dh-kc2">
+    <device id="retina6_1" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="W05-rb-SEm">
+            <objects>
+                <viewController id="Jam-dh-kc2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="koJ-QK-99q">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qiE-2A-XU3">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <color key="backgroundColor" red="0.53333336114883423" green="0.9647059440612793" blue="0.047058828175067902" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcD-iK-UbF">
+                                <rect key="frame" x="428" y="278" width="295" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="8t6-W0-cl2"/>
+                                    <constraint firstAttribute="height" constant="108" id="UTz-fB-FKw"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="play.jpg"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="6Ly-xL-vk3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qiE-2A-XU3" firstAttribute="leading" secondItem="koJ-QK-99q" secondAttribute="leading" id="4Jc-Sx-NlJ"/>
+                            <constraint firstItem="qiE-2A-XU3" firstAttribute="top" secondItem="9uK-HU-QIR" secondAttribute="top" id="D3G-hB-FPI"/>
+                            <constraint firstItem="mcD-iK-UbF" firstAttribute="leading" secondItem="9uK-HU-QIR" secondAttribute="leading" constant="384" id="Ewh-pn-wel"/>
+                            <constraint firstItem="qiE-2A-XU3" firstAttribute="top" secondItem="9uK-HU-QIR" secondAttribute="top" id="Px0-Xn-Pzk"/>
+                            <constraint firstAttribute="trailing" secondItem="qiE-2A-XU3" secondAttribute="trailing" id="R7u-to-J0X"/>
+                            <constraint firstItem="qiE-2A-XU3" firstAttribute="leading" secondItem="9uK-HU-QIR" secondAttribute="leading" constant="-44" id="hbF-Rg-3cZ"/>
+                            <constraint firstItem="9uK-HU-QIR" firstAttribute="bottom" secondItem="qiE-2A-XU3" secondAttribute="bottom" constant="-21" id="hzX-RJ-XXm"/>
+                            <constraint firstItem="9uK-HU-QIR" firstAttribute="trailing" secondItem="qiE-2A-XU3" secondAttribute="trailing" constant="-44" id="iOs-v0-oWM"/>
+                            <constraint firstItem="9uK-HU-QIR" firstAttribute="trailing" secondItem="mcD-iK-UbF" secondAttribute="trailing" constant="129" id="nIC-RM-hfx"/>
+                            <constraint firstItem="9uK-HU-QIR" firstAttribute="bottom" secondItem="mcD-iK-UbF" secondAttribute="bottom" constant="7" id="nb2-TF-vid"/>
+                            <constraint firstAttribute="bottom" secondItem="qiE-2A-XU3" secondAttribute="bottom" id="qu7-Ps-egx"/>
+                            <constraint firstItem="mcD-iK-UbF" firstAttribute="top" secondItem="9uK-HU-QIR" secondAttribute="top" constant="278" id="xz6-h1-eW5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9uK-HU-QIR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kAH-Fb-9Mo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-733.92857142857144" y="75.362318840579718"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController restorationIdentifier="1" storyboardIdentifier="1" id="BV1-FR-VrT" customClass="GameViewController" customModule="AngryBird" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaY-Cl-6Xp">
+                                <rect key="frame" x="0.0" y="0.0" width="90" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back" image="bacjk.jpg"/>
+                                <connections>
+                                    <segue destination="Jam-dh-kc2" kind="show" id="3Do-It-xUi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141.29464285714286" y="75.362318840579718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bacjk.jpg" width="1051.6854248046875" height="1051.6854248046875"/>
+        <image name="game.jpg" width="469.5" height="195"/>
+        <image name="play.jpg" width="469.5" height="469.5"/>
+    </resources>
+</document>
